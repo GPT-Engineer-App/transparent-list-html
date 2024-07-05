@@ -5,6 +5,7 @@ import { Home } from "lucide-react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./layouts/default"; // available: default, navbar, sidebar
 import Index from "./pages/Index.jsx";
+import TransparentList from "./pages/TransparentList.jsx";
 const queryClient = new QueryClient();
 
 export const navItems = [
@@ -26,6 +27,7 @@ const App = () => {
               <Route index element={<Index />} />
               {/* Add more routes here as needed */}
             </Route>
+            <Route path="/transparent-list" element={<TransparentList />} />
           </Routes>
         </Router>
       </TooltipProvider>
